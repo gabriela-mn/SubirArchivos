@@ -7,7 +7,7 @@ const app = express()
 app.use(fileUpload())
 app.use(cors());
 
-app.post('/upload',(req,res) => {
+app.post('http://localhost:3000/upload',(req,res) => {
     let EDFile = req.files.file
 
     EDFile.mv(`./files/${EDFile.name}`,err => {
